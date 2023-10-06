@@ -1,0 +1,58 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)
+// swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name GoogleMapsUtils
+import CoreLocation
+import GoogleMaps
+@_exported import GoogleMapsUtils
+import Swift
+import _Concurrency
+extension GoogleMaps.GMSPolygon {
+  public func contains(coordinate: CoreLocation.CLLocationCoordinate2D) -> Swift.Bool
+  public func area(radius: CoreLocation.CLLocationDistance = kGMSEarthRadius) -> Swift.Double?
+  public func signedArea(radius: CoreLocation.CLLocationDistance = kGMSEarthRadius) -> Swift.Double?
+}
+extension GoogleMaps.GMSPolyline {
+  public func isOnPolyline(coordinate: CoreLocation.CLLocationCoordinate2D, tolerance: Swift.Double = GMSPath.defaultToleranceInMeters) -> Swift.Bool
+}
+public struct MapPoint {
+}
+extension CoreLocation.CLLocationCoordinate2D {
+  public var mapPoint: GoogleMapsUtils.MapPoint {
+    get
+  }
+}
+extension GoogleMapsUtils.MapPoint {
+  public var location: CoreLocation.CLLocationCoordinate2D {
+    get
+  }
+  public func distance(to: GoogleMapsUtils.MapPoint) -> Swift.Double
+  public static func interpolate(from: GoogleMapsUtils.MapPoint, to: GoogleMapsUtils.MapPoint, fraction: Swift.Double) -> GoogleMapsUtils.MapPoint
+}
+extension GoogleMaps.GMSPath {
+  public static var defaultToleranceInMeters: Swift.Double
+  public func area(radius: CoreLocation.CLLocationDistance = kGMSEarthRadius) -> Swift.Double
+  public func signedArea(radius: CoreLocation.CLLocationDistance = kGMSEarthRadius) -> Swift.Double
+  public func contains(coordinate: CoreLocation.CLLocationCoordinate2D, geodesic: Swift.Bool) -> Swift.Bool
+  public func isOnPath(coordinate: CoreLocation.CLLocationCoordinate2D, geodesic: Swift.Bool, tolerance: Swift.Double = defaultToleranceInMeters) -> Swift.Bool
+  public func styleSpans(styles: [GoogleMaps.GMSStrokeStyle], lengths: [Swift.Double], lengthKind: GoogleMaps.GMSLengthKind, offset: Swift.Double = 0) -> [GoogleMaps.GMSStyleSpan]
+}
+extension Swift.Sequence where Self.Element == CoreLocation.CLLocationCoordinate2D {
+  public var gmsMutablePath: GoogleMaps.GMSMutablePath {
+    get
+  }
+}
+@objc public class HeatMapInterpolationPoints : ObjectiveC.NSObject {
+  public typealias HeatmapInterpolationInfluence = Swift.Double
+  public init(givenClusterIterations: Swift.Int = 25)
+  public func addWeightedLatLngs(latlngs: [GoogleMapsUtils.GMUWeightedLatLng])
+  public func addWeightedLatLng(latlng: GoogleMapsUtils.GMUWeightedLatLng)
+  public func removeAllData()
+  public func generatePoints(influence: GoogleMapsUtils.HeatMapInterpolationPoints.HeatmapInterpolationInfluence, granularity: Swift.Double = 0.1) throws -> [GoogleMapsUtils.GMUWeightedLatLng]
+  @objc deinit
+}
+extension CoreLocation.CLLocationCoordinate2D {
+  public func distance(to: CoreLocation.CLLocationCoordinate2D) -> CoreLocation.CLLocationDistance
+  public func heading(to: CoreLocation.CLLocationCoordinate2D) -> CoreLocation.CLLocationDistance
+  public func offset(distance: CoreLocation.CLLocationDistance, heading: CoreLocation.CLLocationDistance) -> CoreLocation.CLLocationCoordinate2D
+  public func interpolate(to: CoreLocation.CLLocationCoordinate2D, fraction: Swift.Double) -> CoreLocation.CLLocationCoordinate2D
+}
