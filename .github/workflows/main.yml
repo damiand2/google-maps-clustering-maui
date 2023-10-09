@@ -35,7 +35,6 @@ jobs:
           dotnet-version: 7.x
           
       - name: Install MAUI Workload
-      - name: Install MAUI Workload
         run: |
           dotnet nuget locals all --clear
           dotnet workload install maui --source https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet7/nuget/v3/index.json --source https://api.nuget.org/v3/index.json

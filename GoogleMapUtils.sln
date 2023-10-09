@@ -14,9 +14,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GoogleMapUtils.Android", "A
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GoogleMapUtils.iOS", "iOS\GoogleMapUtils.iOS.csproj", "{F3C214E0-C8BE-422E-A934-7D1509EE9D76}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "pipelines", "pipelines", "{0307ADD0-3ECF-4001-AD24-CB36813F67C6}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{50D26933-C004-472A-8F78-B647D46233EE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{A1132F10-173C-498D-AFA7-AF03FDF5816E}"
 	ProjectSection(SolutionItems) = preProject
-		build.yml = build.yml
+		.github\workflows\main.yml = .github\workflows\main.yml
 	EndProjectSection
 EndProject
 Global
@@ -36,6 +38,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A1132F10-173C-498D-AFA7-AF03FDF5816E} = {50D26933-C004-472A-8F78-B647D46233EE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AC72709F-4CA6-4F30-B36D-49D7E42873F2}
