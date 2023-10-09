@@ -1,0 +1,48 @@
+name: build and deploy
+
+on:
+  push:
+    branches: [ master ]
+    paths-ignore:
+      - '**/*.md'
+      - '**/*.gitignore'
+      - '**/*.gitattributes'
+  pull_request:
+    branches: [ master ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  DOTNET_NOLOGO: true                     # Disable the .NET logo
+  DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true # Disable the .NET first time experience
+  DOTNET_CLI_TELEMETRY_OPTOUT: true       # Disable sending .NET CLI telemetry
+
+jobs:
+# MAUI Android Build
+  build-android-ios:
+    runs-on: macos-13
+    name: Android and iOS Build
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup .NET 7
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: 7.x
+          
+      - name: Install MAUI Workload
+      - name: Install MAUI Workload
+        run: |
+          dotnet nuget locals all --clear
+          dotnet workload install maui --source https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet7/nuget/v3/index.json --source https://api.nuget.org/v3/index.json
+          dotnet workload install android ios maui --source https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet7/nuget/v3/index.json --source https://api.nuget.org/v3/index.json
+
+      - name: Restore Dependencies
+        run: dotnet restore GoogleMapUtils.sln
+
+      - name: Build MAUI Android
+        run: dotnet build GoogleMapUtils.sln --configuration Release --no-restore
