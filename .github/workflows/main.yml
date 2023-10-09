@@ -45,3 +45,6 @@ jobs:
 
       - name: Build MAUI Android
         run: dotnet build GoogleMapUtils.sln --configuration Release --no-restore
+
+      - name: list packages
+        run: find . -type f -name "*.nupkg"  
