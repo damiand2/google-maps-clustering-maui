@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
-namespace GoogleMapUtils.iOS
+namespace GMapUtils.iOS
 {
     [StructLayout(LayoutKind.Sequential)]
     public struct GQTPoint

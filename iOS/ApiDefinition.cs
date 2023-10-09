@@ -8,7 +8,7 @@ using Google.Maps;
 using ObjCRuntime;
 using UIKit;
 
-namespace GoogleMapUtils.iOS
+namespace GMapUtils.iOS
 {
     [Protocol, Model]
     [BaseType(typeof(NSObject), Name = "GMUClusterItem")]

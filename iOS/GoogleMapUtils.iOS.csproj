@@ -8,14 +8,14 @@
 		<PackOnBuild>true</PackOnBuild>
 	</PropertyGroup>
 	<PropertyGroup>
-		<PackageId>GoogleMapUtils.iOS</PackageId>
-		<Title>GoogleMapUtils.iOS</Title>
+		<PackageId>GMapUtils.iOS</PackageId>
+		<Title>GMapUtils.iOS</Title>
 		<Summary>Google map utils library for projects using .NET MAUI</Summary>
 		<Authors>Damian Dekoszczak</Authors>
 		<Owners>$(Authors)</Owners>
 		<Company>$(Authors)</Company>
 		<NeutralLanguage>en-US</NeutralLanguage>
-		<Product>GoogleMapUtils.iOS ($(TargetFramework))</Product>
+		<Product>GMapUtils.iOS ($(TargetFramework))</Product>
 		<Copyright>Copyright © $([System.DateTime]::Today.ToString(yyyy)) $(Authors)</Copyright>
 		<PackageDescription>$(Description)</PackageDescription>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
@@ -46,7 +46,7 @@
 		<AssemblyFileVersion>$(Version)</AssemblyFileVersion>
 		<Version>1.0.0</Version>
 		<VersionPrefix></VersionPrefix>
-		<VersionSuffix>-preview1</VersionSuffix>
+		<VersionSuffix>-b1</VersionSuffix>
 		<PackageVersion>$(VersionPrefix)$(Version)$(VersionSuffix)</PackageVersion>
 		<PackageTags>maui, ios, google, map, maps, utils, heatmap, kml, geo, json, cluster, clustering, marker, pin, location</PackageTags>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
