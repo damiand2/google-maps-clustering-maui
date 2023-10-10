@@ -52,7 +52,7 @@ jobs:
           $files = dir ./* -include ("*.nupkg") -recurse
           foreach($file in $files)
           {
-            write-host 'Publishing $(${file}.FullName)'
-            nuget push $file.FullName -ApiKey ${{ secrets.NUGET_API_KEY }}
+            write-host "Publishing $(${file}.FullName)"
+            nuget push $file.FullName -ApiKey ${{ secrets.NUGET_API_KEY }} -Source https://api.nuget.org/v3/index.json -NonInteractive -Verbosity detailed
           }        
 
