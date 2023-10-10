@@ -10,10 +10,11 @@ on:
   pull_request:
     branches: [ main ]
   workflow_dispatch:
-    nuget_push:
-      description: 'Push to nuget?'
-      required: false
-      default: 'false'
+    inputs:
+      nuget_push:
+        description: 'Push to nuget?'
+        required: false
+        default: 'false'
 
 permissions:
   contents: read
@@ -51,7 +52,7 @@ jobs:
         run: dotnet build GoogleMapUtils.sln --configuration Release --no-restore
 
       - name: push nugets
-        if: ${{ inputs.nuget_push == 'true' }}
+        if: ${{ github.event.inputs.nuget_push == 'true' }}
         shell: pwsh
         run: |
           $files = dir ./* -include ("*.nupkg") -recurse
