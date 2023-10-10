@@ -46,7 +46,7 @@
 		<AssemblyFileVersion>$(Version)</AssemblyFileVersion>
 		<Version>1.0.0</Version>
 		<VersionPrefix></VersionPrefix>
-		<VersionSuffix>-b1</VersionSuffix>
+		<VersionSuffix>-b2</VersionSuffix>
 		<PackageVersion>$(VersionPrefix)$(Version)$(VersionSuffix)</PackageVersion>
 		<PackageTags>maui, ios, google, map, maps, utils, heatmap, kml, geo, json, cluster, clustering, marker, pin, location</PackageTags>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>

@@ -46,5 +46,13 @@ jobs:
       - name: Build MAUI Android
         run: dotnet build GoogleMapUtils.sln --configuration Release --no-restore
 
-      - name: list packages
-        run: find . -type f -name "*.nupkg"  
+      - name: push nugets
+        shell: pwsh
+        run: |
+          $files = dir ./* -include ("*.nupkg") -recurse
+          foreach($file in $files)
+          {
+            write-host 'Publishing $(${file}.FullName)'
+            nuget push $file.FullName -ApiKey ${{ secrets.NUGET_API_KEY }}
+          }        
+
