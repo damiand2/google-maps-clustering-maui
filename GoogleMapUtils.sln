@@ -21,6 +21,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{
 		.github\workflows\main.yml = .github\workflows\main.yml
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample", "Sample", "{3413D4C3-6AAA-4F40-8354-D3C7B489B22D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapDemo", "Sample\MapDemo\MapDemo.csproj", "{2EFBCD77-6D54-4413-B37A-42410B1A696B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,12 +39,19 @@ Global
 		{F3C214E0-C8BE-422E-A934-7D1509EE9D76}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F3C214E0-C8BE-422E-A934-7D1509EE9D76}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F3C214E0-C8BE-422E-A934-7D1509EE9D76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EFBCD77-6D54-4413-B37A-42410B1A696B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EFBCD77-6D54-4413-B37A-42410B1A696B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EFBCD77-6D54-4413-B37A-42410B1A696B}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{2EFBCD77-6D54-4413-B37A-42410B1A696B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EFBCD77-6D54-4413-B37A-42410B1A696B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EFBCD77-6D54-4413-B37A-42410B1A696B}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{A1132F10-173C-498D-AFA7-AF03FDF5816E} = {50D26933-C004-472A-8F78-B647D46233EE}
+		{2EFBCD77-6D54-4413-B37A-42410B1A696B} = {3413D4C3-6AAA-4F40-8354-D3C7B489B22D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AC72709F-4CA6-4F30-B36D-49D7E42873F2}
