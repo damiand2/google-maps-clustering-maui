@@ -41,3 +41,7 @@ This is the same problem as above on windows, but this time it is related to pro
 Or build on Mac where problem does not occur.
 - Error during ios build - clang exited with 1 - most probably missing swift link build step, please consult 'Usage' chapter above
 
+# Sample app
+- put your google map keys inside androidmanofest.xml file and inside MauiProgram.cs (for iOS)
+- run app, double click on map to zoom in
+

@@ -29,7 +29,7 @@
 		<UseFullSemVerForNuGet>false</UseFullSemVerForNuGet>
 		<Description>
 			$(Summary)
-Set of Maui bindings of Google Maps Utility for Android - $(PackageId)
+Set of Maui bindings of Google Maps Utility for Android (3.5.3) - $(PackageId)
 		</Description>
 		<PackageReleaseNotes>
 			Native Library version:			
@@ -45,7 +45,7 @@ Set of Maui bindings of Google Maps Utility for Android - $(PackageId)
 		<AssemblyFileVersion>$(Version)</AssemblyFileVersion>
 		<Version>1.0.0</Version>
 		<VersionPrefix></VersionPrefix>
-		<VersionSuffix>-b3</VersionSuffix>
+		<VersionSuffix></VersionSuffix>
 		<PackageVersion>$(VersionPrefix)$(Version)$(VersionSuffix)</PackageVersion>
 		<PackageTags>maui, android, google, map, maps, utils, heatmap, kml, geo, json, cluster, clustering, marker, pin, location</PackageTags>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
