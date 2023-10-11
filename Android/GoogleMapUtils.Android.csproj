@@ -29,11 +29,11 @@
 		<UseFullSemVerForNuGet>false</UseFullSemVerForNuGet>
 		<Description>
 			$(Summary)
-			Set of Maui bindings of Google Maps Utility for Android - $(PackageId)
+Set of Maui bindings of Google Maps Utility for Android - $(PackageId)
 		</Description>
 		<PackageReleaseNotes>
 			Native Library version:			
-			[Android] android-maps-utils-2.4.0			
+			[Android] android-maps-utils-3.5.3		
 		</PackageReleaseNotes>
 		<PublishRepositoryUrl>false</PublishRepositoryUrl>
 		<EmbedUntrackedSources>true</EmbedUntrackedSources>
@@ -45,7 +45,7 @@
 		<AssemblyFileVersion>$(Version)</AssemblyFileVersion>
 		<Version>1.0.0</Version>
 		<VersionPrefix></VersionPrefix>
-		<VersionSuffix>-b2</VersionSuffix>
+		<VersionSuffix>-b3</VersionSuffix>
 		<PackageVersion>$(VersionPrefix)$(Version)$(VersionSuffix)</PackageVersion>
 		<PackageTags>maui, android, google, map, maps, utils, heatmap, kml, geo, json, cluster, clustering, marker, pin, location</PackageTags>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -80,7 +80,7 @@
 	</ItemGroup>
 	
 	<ItemGroup>
-		<None Remove="Jars\android-maps-utils-2.4.0.aar" />
+		<None Remove="Jars\android-maps-utils-3.5.3.aar" />
 	</ItemGroup>
 	<ItemGroup>
 		<PackageReference Include="Xamarin.GooglePlayServices.Maps" Version="118.1.0" />
