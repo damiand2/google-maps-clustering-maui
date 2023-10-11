@@ -52,7 +52,7 @@
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<IncludeSymbols>true</IncludeSymbols>
 		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
-		<Configurations>Debug;Release</Configurations>
+		<Configurations>Debug;Release;Release-NoSample</Configurations>
 		<NoWarn>1587,1591</NoWarn>
 	</PropertyGroup>
 	
@@ -81,7 +81,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<None Include="..\icon.png" >
+		<None Include="..\icon.png">
 			<Link>icon.png</Link>
 			<Pack>True</Pack>
 			<PackagePath></PackagePath>

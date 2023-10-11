@@ -49,7 +49,7 @@ jobs:
         run: dotnet restore GoogleMapUtils.sln
 
       - name: Build MAUI Android
-        run: dotnet build GoogleMapUtils.sln --configuration Release --no-restore
+        run: dotnet build GoogleMapUtils.sln --configuration 'Release-NoSample' --no-restore
 
       - name: push nugets
         if: ${{ github.event.inputs.nuget_push == 'true' }}
