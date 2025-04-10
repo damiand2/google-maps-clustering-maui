@@ -59,6 +59,6 @@ jobs:
           foreach($file in $files)
           {
             write-host "Publishing $(${file}.FullName)"
-            dotnet nuget push $file.FullName -ApiKey ${{ secrets.NUGET_API_KEY }} -Source https://api.nuget.org/v3/index.json -NonInteractive -Verbosity detailed
+            dotnet nuget push $file.FullName --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --diagnostics detailed
           }        
 
