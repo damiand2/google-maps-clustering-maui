@@ -43,7 +43,7 @@ Set of Maui (net8) bindings of Google Maps Utility for Android (3.11.2) - $(Pack
 		<FileVersion>$(Version)</FileVersion>
 		<AssemblyVersion>$(Version)</AssemblyVersion>
 		<AssemblyFileVersion>$(Version)</AssemblyFileVersion>
-		<Version>2.0.0-preview1</Version>
+		<Version>2.0.0-preview2</Version>
 		<VersionPrefix></VersionPrefix>
 		<VersionSuffix></VersionSuffix>
 		<PackageVersion>$(VersionPrefix)$(Version)$(VersionSuffix)</PackageVersion>
