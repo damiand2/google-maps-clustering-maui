@@ -1,10 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<TargetFramework>net7.0-ios</TargetFramework>
+		<TargetFramework>net8.0-ios</TargetFramework>
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>true</ImplicitUsings>
 		<IsBindingProject>true</IsBindingProject>
-		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">12.0</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">15.0</SupportedOSPlatformVersion>
 		<PackOnBuild>true</PackOnBuild>
 	</PropertyGroup>
 	<PropertyGroup>
@@ -30,7 +30,7 @@
 		<UseFullSemVerForNuGet>false</UseFullSemVerForNuGet>
 		<Description>
 			$(Summary)
-			Set of Maui bindings of Google Maps Utility for iOS (4.2.2) - $(PackageId)
+			Set of Maui (net8) bindings of Google Maps Utility for iOS (4.2.2) - $(PackageId)
 		</Description>
 		<PackageReleaseNotes>
 			Native Library version:
@@ -44,7 +44,7 @@
 		<FileVersion>$(Version)</FileVersion>
 		<AssemblyVersion>$(Version)</AssemblyVersion>
 		<AssemblyFileVersion>$(Version)</AssemblyFileVersion>
-		<Version>1.0.0</Version>
+		<Version>2.0.0-preview1</Version>
 		<VersionPrefix></VersionPrefix>
 		<VersionSuffix></VersionSuffix>
 		<PackageVersion>$(VersionPrefix)$(Version)$(VersionSuffix)</PackageVersion>
@@ -55,14 +55,14 @@
 		<Configurations>Debug;Release;Release-NoSample</Configurations>
 		<NoWarn>1587,1591</NoWarn>
 	</PropertyGroup>
-	
+
 
 	<ItemGroup>
 		<ObjcBindingApiDefinition Include="ApiDefinition.cs" />
 		<ObjcBindingCoreSource Include="StructsAndEnums.cs" />
 	</ItemGroup>
 	<ItemGroup>
-		<PackageReference Include="Xamarin.Google.iOS.Maps" Version="6.0.1.1" />
+		<PackageReference Include="AdamE.Google.iOS.Maps" Version="9.2.0.5" />
 		<PackageReference Include="Xamarin.Build.Download" Version="0.11.4" />
 	</ItemGroup>
 	<ItemGroup>
@@ -75,7 +75,7 @@
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.SourceLink.GitHub">
-			<Version>1.1.1</Version>
+			<Version>8.0.0</Version>
 			<PrivateAssets>All</PrivateAssets>
 		</PackageReference>
 	</ItemGroup>
